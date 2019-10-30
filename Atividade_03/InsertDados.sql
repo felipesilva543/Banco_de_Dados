@@ -1,0 +1,113 @@
+-- Autor(idautor, nome)
+--insert into Autor (nome) values ('Roberto Martins Figueiredo');
+--insert into Autor (nome) values ('Daniel Kahneman');
+--insert into Autor (nome) values ('Hilary Duff');
+--insert into Autor (nome) values ('Robson Pinheiro');
+--insert into Autor (nome) values ('Cecelia Ahem');
+--insert into Autor (nome) values ('Arlene Einsenberg');
+--insert into Autor (nome) values ('Sandee Hathaway');
+--insert into Autor (nome) values ('Heidi Murkoff');
+--insert into Autor (nome) values ('Julio Cesar de Barros');
+--insert into Autor (nome) values ('Maria José valero');
+
+--Cliente(idcliente, nome, telefone)
+--insert into Cliente (nome, telefone) values ('Joao Silva', 1111);
+--insert into Cliente (nome, telefone) values ('Maria Cunha', 2222);
+--insert into Cliente (nome, telefone) values ('Pedro Aguiar', 8888);
+--insert into Cliente (nome, telefone) values ('Elaine Luciana', 9374);
+--insert into Cliente (nome, telefone) values ('Antoino Pereira', 3764);
+--insert into Cliente (nome, telefone) values ('Catarina Dias', 999);
+--insert into Cliente (nome, telefone) values ('Felipe Escolar', 8787);
+--insert into Cliente (nome, telefone) values ('Nando Caixinha', 5478);
+--insert into Cliente (nome, telefone) values ('Pelé Golias', 7811);
+--insert into Cliente (nome, telefone) values ('Tito Vardones', 7489);
+
+-- Editora (ideditora, nome)
+--insert into Editora (nome) values ('Um');
+--insert into Editora (nome) values ('Dois');
+--insert into Editora (nome) values ('Tres');
+--insert into Editora (nome) values ('Quatro');
+--insert into Editora (nome) values ('Cinco');
+--insert into Editora (nome) values ('Seis');
+--insert into Editora (nome) values ('Sete');
+
+-- Genero (idgenero, descricao)
+--insert into Genero (descricao) values ('Espiritualismo');
+--insert into Genero (descricao) values ('Infanto-Juvenil');
+--insert into Genero (descricao) values ('Economia');
+--insert into Genero (descricao) values ('Medicina');
+--insert into Genero (descricao) values ('Romance');
+--insert into Genero (descricao) values ('Historia');
+--insert into Genero (descricao) values ('Fantasia');
+--insert into Genero (descricao) values ('Auto-Ajuda');
+--insert into Genero (descricao) values ('Informática');
+--insert into Genero (descricao) values ('Humor');
+
+-- Livro (idlivro, titulo, preco, estoque, idgenero, ideditora) (Obs.: idgenero e ideditora são chaves estrangeiras para as tabelas gênero e editora respectivamente)
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Pelas Ruas de Calcutá', 36.1, 5, 1, 1);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Devoted - Devoção', 27.2, 4, 2, 2);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Rápido e Devagar - Duas Formas de Pensar', 43.9, 8, 3, 3);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Xô, Bactéria! Tire Suas Dúvidas com Dr. Bactéria', 32.7, 6, 4, 4);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('P.s. - Eu Te Amo', 23.5, 10, 5, 5);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('O Que Esperar Quando Você Está Esperando', 37.8, 20, 4, 6);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('As Melhores Frases Em Veja', 23.9, 0, 6, 7);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Bichos Monstruosos', 24.9, 12, 2, 6);
+--insert into Livro (titulo, preco, estoque, id_gen, id_edit) values ('Casas Mal Assombradas', 27.9, 0, 2, 6);
+
+-- Venda (idvenda, data, total, idcliente) (Obs.: idcliente é chave estrangeira para a tabela cliente)
+--insert into Venda (dt_venda, total, id_cli) values ('2012-01-01', 30, 1);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-02-02', 60, 2);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-03-03', 90, 3);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-04-04', 120, 4);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-05-05', 50, 5);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-06-06', 600, 6);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-07-07', 70, 7);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-08-08', 85, 8);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-09-09', 100, 9);
+--insert into Venda (dt_venda, total, id_cli) values (null, null, null);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-11-11', 99, 1);
+--insert into Venda (dt_venda, total, id_cli) values ('2012-12-12', 59, 2);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-01-02', 46, 3);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-02-01', 399, 4);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-03-04', 42, 5);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-04-03', 79, 6);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-05-06', 130, 7);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-06-05', 245, 8);
+--insert into Venda (dt_venda, total, id_cli) values ('2011-07-06', 19, 9);
+
+-- Escreve (idlivro, idautor) (Obs.: idlivro e idautor são chaves estrangeiras para as tabelas livro e autor respectivamente)
+--insert into Escreve (id_escreve, id_autor) values (1,1);
+--insert into Escreve (id_escreve, id_autor) values (2,3);
+--insert into Escreve (id_escreve, id_autor) values (3,2);
+--insert into Escreve (id_escreve, id_autor) values (5,5);
+--insert into Escreve (id_escreve, id_autor) values (6,6);
+--insert into Escreve (id_escreve, id_autor) values (6,7);
+--insert into Escreve (id_escreve, id_autor) values (6,8);
+--insert into Escreve (id_escreve, id_autor) values (7,9);
+--insert into Escreve (id_escreve, id_autor) values (8,10);
+--insert into Escreve (id_escreve, id_autor) values (9,10);
+
+-- Itens_da_venda(idvenda, idlivro, qtd, subtotal)
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (1, 1, 1, 36.1);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (1, 2, 1, 27.2);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (2, 2, 2, 54.4);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (2, 3, 1, 43.9);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (3, 4, 1, 32.7);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (4, 5, 1, 23.5);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (5, 5, 1, 23.5);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (6, 5, 1, 23.5);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (7, 6, 1, 37.8);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (8, 7, 2, 47.8);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (8, 7, 2, 47.8);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (9, 8, 3, 74.7);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (10, 9, 1, 27.9);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (11, 6, 1, 37.8);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (12, 1, 1, 36.1);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (13, 4, 1, 32.7);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (14, 7, 2, 47.8);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (15, 9, 1, 27.9);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (16, 3, 1, 43.9);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (17, 8, 4, 99.6);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (18, 2, 1, 27.2);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (19, 4, 1, 32.7);
+--insert into Itens_da_venda (id_venda, id_liv, qtd, subtotal) values (20, 6, 1, 37.8);
