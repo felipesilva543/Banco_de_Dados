@@ -8,7 +8,7 @@ begin
 	DROP TABLE IF EXISTS _tmpComprasProd;
 	create temporary table _tmpComprasProd as select CP.id_compra, CP.num_prod, CP.qtd, ((CP.qtd * (Pr.valor - (Pr.valor * Pr.desconto))) ) AS ValorC
 		from compra_prod CP, produtos Pr where
-			cpf_cli = '111' and 
+			cpf_cli = cpf_cliente and 
 			CP.num_prod = Pr.num_prod and
 			CP.status = 'NP' and
 			CP.data_compra = current_date;
@@ -57,10 +57,10 @@ begin
 	DROP TABLE IF EXISTS _tmpComprasServ;
 	create temporary table _tmpComprasServ as select CS.id_compra, CS.id_serv, ((S.valor - (S.valor * S.desconto))) AS ValorC
 		from compra_serv CS, Servicos S where
-			CS.cpf_cli = '111' and
+			CS.cpf_cli = cpf_cliente and
 			CS.id_serv = S.id_serv and
 			status = 'NP' and
-			CS.data_compra = '2019-11-01'; --current_date;
+			CS.data_compra = current_date;
 						
 	EXECUTE 'select sum(ValorC) from _tmpComprasServ' into valorTCompra;
 	raise notice 'Valor total: %', (valorTCompra - (valorTCompra * descontoF));
